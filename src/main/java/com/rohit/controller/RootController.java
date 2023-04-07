@@ -14,6 +14,11 @@ public class RootController {
     public String index(Model model) {
         model.addAttribute("pageTitle", "Thymeleaf");
         model.addAttribute("userName", "Rohit");
+
+        model.addAttribute("scientists", List.of("Albert Einstein",
+                "Niels Bohr",
+                "James Clerk Maxwell"));
+
         return "index"; // returning index.html
     }
 }

@@ -10,5 +10,12 @@
 <h1 th:text="${pageTitle}">Understanding Thymeleaf!</h1>
 <div th:text="${userName}">Bob</div>
 <div th:text="${userName}"><i>Bob</i></div>
+<div>
+    <ul>
+        <li th:each="scientist : ${scientists}">
+            <span th:text="${scientist}"></span>
+        </li>
+    </ul>
+</div>
 </body>
 </html>
