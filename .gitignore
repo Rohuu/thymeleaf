@@ -3,3 +3,4 @@
 build
 .gradle
 HELP.md
+node_modules

@@ -13,8 +13,8 @@ public class RootController {
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("pageTitle", "Thymeleaf");
-        model.addAttribute("userName", "Rohit");
-
+        model.addAttribute("userName", "Mohit");
+        model.addAttribute("userId", 555);
         model.addAttribute("scientists", List.of("Albert Einstein",
                 "Niels Bohr",
                 "James Clerk Maxwell"));

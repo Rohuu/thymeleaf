@@ -5,11 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Thymeleaf</title>
+    <link rel="stylesheet" th:href="@{/application.css}">
 </head>
 <body>
-<h1 th:text="${pageTitle}">Understanding Thymeleaf!</h1>
-<div th:text="${userName}">Bob</div>
-<div th:text="${userName}"><i>Bob</i></div>
+<h1 th:text="${pageTitle}" class="text-4xl mx-4 mb-4 border-b-4 border-red-700">Taming Thymeleaf</h1>
+<!--<h1 th:text="${pageTitle}" class="">Understanding Thymeleaf!</h1>-->
+<!--<div th:text="${userName}">bhupendra</div>-->
+<!--<div th:text="${userName}"><i>Bob</i></div>-->
 <div>
     <ul>
         <li th:each="scientist : ${scientists}">
@@ -17,5 +19,7 @@
         </li>
     </ul>
 </div>
+<div th:id="|container-${userId}|"></div>
+<div th:if="${userId>550}">This is false!</div>
 </body>
 </html>
