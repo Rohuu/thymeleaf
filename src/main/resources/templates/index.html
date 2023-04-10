@@ -14,17 +14,23 @@
 <br>
 <br>
 
+<h1>Selection variable expression</h1>
 <div th:object="${person1}">
     <div>Name: <span th:text="*{getName}">replaced name</span></div>
     <div>Age: <span   th:text="*{age}">replaced age</span></div>
 </div>
-<!--<div>-->
-<!--    <ul>-->
-<!--        <li th:each="scientist : ${scientists}">-->
-<!--            <span th:text="${scientist}"></span>-->
-<!--        </li>-->
-<!--    </ul>-->
-<!--</div>-->
+<br>
+<br>
+
+<h1>Iteration expression</h1>
+<div>
+    <ul>
+        <li th:each="scientist : ${scientists}">
+            <span th:text="${scientist}"></span>
+        </li>
+    </ul>
+</div>
+
 <!--<div th:id="|container-${userId}|"></div>-->
 <!--<div th:if="${userId>550}">This is false!</div>-->
 </body>
