@@ -14,10 +14,10 @@
 <br>
 <br>
 
-<!--<div th:text="${person1}">-->
-<!--    Name: <p th:text="${person1.getName}">replaced name</p>-->
-<!--    Age: <h3 th:text="${person1.getAge}">replaced age</h3>-->
-<!--</div>-->
+<div th:object="${person1}">
+    <div>Name: <span th:text="*{getName}">replaced name</span></div>
+    <div>Age: <span   th:text="*{age}">replaced age</span></div>
+</div>
 <!--<div>-->
 <!--    <ul>-->
 <!--        <li th:each="scientist : ${scientists}">-->
