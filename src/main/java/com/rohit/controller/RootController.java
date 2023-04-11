@@ -11,7 +11,7 @@ import java.util.List;
 @Controller
 public class RootController {
 
-    @GetMapping("/")
+    @GetMapping({"/", "/home"})
     public String index(Model model) {
         model.addAttribute("scientists", List.of("Albert Einstein",
                 "Niels Bohr",
@@ -24,5 +24,10 @@ public class RootController {
         model.addAttribute("person1",person);
 
         return "index"; // returning index.html
+    }
+
+    @GetMapping("/contact")
+    public String contact() {
+        return "contact"; // returning contact.html
     }
 }
